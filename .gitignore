@@ -1,6 +1,6 @@
 */__pycache__
 /ZH_Embedding/
-fasttest_cn_embedding.ipynb
+fasttext_cn_embedding.ipynb
 playground.ipynb
 fasttext_embedding.py
 *.pth
