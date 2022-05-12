@@ -9,6 +9,7 @@ from config import Config
 from PoetryDataset import word2ix, ix2word, poetry_data, PoetryDataset
 from Model.LSTM import Model as LSTM
 from Model.BiLSTM import Model as BiLSTM
+from Model.pretrained_LSTM import Model as pretrained_LSTM
 
 cfg = Config()
 poetry_dataset = PoetryDataset()
@@ -16,6 +17,7 @@ poetry_loader = DataLoader(poetry_dataset, batch_size=cfg.batch_size, shuffle=Tr
 
 def train():
     model = BiLSTM() if cfg.bidirectional else LSTM()
+    if cfg.using_pretrained: model = pretrained_LSTM()
     model.train()
     model = model.cuda()
     optimizer = torch.optim.Adam(model.parameters(), lr=cfg.learning_rate)

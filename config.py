@@ -13,6 +13,7 @@ class Config:
         self.poetry_file = 'Dataset/data.npy'
 
         # 与训练和网络有关的参数
+        self.using_pretrained = False
         self.bidirectional = False
         self.lstm_layers = 3
         self.batch_size = 16
