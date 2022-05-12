@@ -5,4 +5,4 @@ fasttext_cn_embedding.ipynb
 playground.ipynb
 fasttext_embedding.py
 *.pth
-
+*.bin
